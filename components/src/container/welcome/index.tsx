@@ -1,10 +1,10 @@
-import React from "react";
-import { View, ImageBackground } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import Login from "@/components/src/container/auth/login"; // Altere o caminho conforme necessário
+import React, { useState } from "react";
+import { View, ImageBackground, Text, TouchableOpacity } from "react-native";
+import Login from "@/components/src/container/auth/login"
+import Register from "@/components/src/container/auth/register"
 
 const Welcome = () => {
-    const navigation = useNavigation();
+    const [isLogin, setIsLogin] = useState(true);
 
     return (
         <ImageBackground
@@ -13,9 +13,10 @@ const Welcome = () => {
             resizeMode="cover"
         >
             <View style={{ flex: 1, justifyContent: "center" }}>
-                {/* Aqui você renderiza a tela de login ou registro */}
-                {/* Por exemplo, você pode utilizar a navegação para controlar qual tela será exibida */}
-                <Login /> {/* Renderize o componente de Login ou Register com base na navegação */}
+
+                {isLogin ? <Login setIsLogin={setIsLogin} /> : <Register setIsLogin={setIsLogin} />}
+
+
             </View>
         </ImageBackground>
     );

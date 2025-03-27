@@ -18,19 +18,19 @@ const authSlice = createSlice({
         setAuth: (state, action: PayloadAction<string>) => {
             state.isAuthenticated = true;
             state.token = action.payload;
-            AsyncStorage.setItem("authToken", action.payload); // Salva no AsyncStorage
+            AsyncStorage.setItem("authToken", action.payload)
         },
         logout: (state) => {
-            state.isAuthenticated = false;
-            state.token = null;
-            AsyncStorage.removeItem("authToken"); // Remove do AsyncStorage
+            state.isAuthenticated = false
+            state.token = null
+            AsyncStorage.removeItem("authToken")
         },
         loadAuth: (state, action: PayloadAction<string | null>) => {
-            state.isAuthenticated = !!action.payload;
-            state.token = action.payload;
+            state.isAuthenticated = !!action.payload
+            state.token = action.payload
         },
     },
 });
 
-export const { setAuth, logout, loadAuth } = authSlice.actions;
-export default authSlice.reducer;
+export const { setAuth, logout, loadAuth } = authSlice.actions
+export default authSlice.reducer
