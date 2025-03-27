@@ -26,7 +26,11 @@ export type RootStackParamList = {
     Login: undefined;
 };
 
-const Register = () => {
+interface RegisterProps {
+    setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Register = (item:RegisterProps) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -57,11 +61,7 @@ const Register = () => {
     };
 
     return (
-        <ImageBackground
-            source={require("../../../../assets/gymLogin.jpg")}
-            style={{ flex: 1, justifyContent: "center", padding: 20 }}
-            resizeMode="cover"
-        >
+
             <View className="bg-white p-8 rounded-2xl max-w-md w-full mx-auto">
                 <View className="mb-8">
                     <Text className="text-3xl font-bold text-gray-800">Crie sua conta,</Text>
@@ -143,12 +143,15 @@ const Register = () => {
                 <Divider />
 
                 <View className="flex flex-row justify-center mt-4">
-                    <TouchableOpacity onPress={handleNavigateToLogin}>
-                        <Text className="text-sm text-purple-700">Já tem uma conta? Faça Login</Text>
+                    <TouchableOpacity onPress={() => item.setIsLogin(true)} style={{ marginRight: 20 }}>
+                        <Text className="text-lg font-bold text-black">Login</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => item.setIsLogin(false)}>
+                        <Text className="text-lg font-bold text-purple-700">Registrar-se</Text>
                     </TouchableOpacity>
                 </View>
             </View>
-        </ImageBackground>
     );
 };
 
