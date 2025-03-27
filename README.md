@@ -1,50 +1,94 @@
-# Welcome to your Expo app 👋
+# Gym App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Gym App** é um aplicativo para gerenciar seus treinos, armazenar seus exercícios favoritos e criar treinos personalizados. Ele foi criado para ajudar você a manter o foco no seu objetivo, seja no treino em casa ou na academia. O aplicativo oferece uma interface simples e eficiente para salvar, visualizar e acompanhar seu progresso.
 
-## Get started
+## Funcionalidades
 
-1. Install dependencies
+- **Criação de Treinos**: Crie treinos personalizados com exercícios de diferentes categorias.
+- **Armazenamento de Exercícios**: Salve seus exercícios favoritos para facilitar a criação de novos treinos.
+- **Acompanhamento de Progresso**: Registre suas repetições, séries e tempo para monitorar seu desempenho.
+- **Modo Escuro e Claro**: Suporte para alternar entre temas claro e escuro de acordo com a sua preferência.
+- **Personalização de Exercícios**: Adicione detalhes aos exercícios, como descrição, séries e repetições.
+- **Interface Intuitiva**: Design limpo e fácil de usar para uma experiência de usuário agradável.
 
-   ```bash
-   npm install
-   ```
+## Tecnologias Usadas
 
-2. Start the app
+- **React Native**: Para o desenvolvimento mobile nativo.
+- **Expo**: Para acelerar o desenvolvimento e simplificar a configuração.
+- **TypeScript**: Para maior segurança no desenvolvimento.
+- **React Navigation**: Para navegação entre telas.
+- **Context API**: Para gerenciamento de estado global (temas e preferências do usuário).
+- **SQLite** ou **Supabase**: Para armazenamento de dados localmente ou remotamente.
 
-   ```bash
+## Como Rodar o Projeto
+
+1. **Instale as dependências**:
+
+    ```bash
+    npm install
+    ```
+
+2. **Inicie o aplicativo**:
+
+    ```bash
     npx expo start
-   ```
+    ```
 
-In the output, you'll find options to open the app in a
+   No terminal, você verá opções para abrir o aplicativo em um:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   - **Emulador Android**
+   - **Simulador iOS**
+   - **Expo Go**: Uma versão limitada para testar rapidamente no dispositivo.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Estrutura do Projeto
 
-## Get a fresh project
+Este projeto usa **file-based routing**, o que significa que as telas são organizadas na pasta **app**. Dentro dessa pasta, você encontrará componentes, telas e estilos organizados para facilitar a manutenção e o desenvolvimento.
 
-When you're ready, run:
+## Como Contribuir
 
-```bash
-npm run reset-project
-```
+1. **Fork** o repositório.
+2. **Clone** o seu fork:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+    ```bash
+    git clone https://github.com/your-username/gym-app.git
+    ```
 
-## Learn more
+3. Crie uma branch para suas alterações:
 
-To learn more about developing your project with Expo, look at the following resources:
+    ```bash
+    git checkout -b nome-da-sua-branch
+    ```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+4. Faça suas alterações, adicione e commite-as:
 
-## Join the community
+    ```bash
+    git add .
+    git commit -m "Descrição das mudanças"
+    ```
 
-Join our community of developers creating universal apps.
+5. **Push** para sua branch:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+    ```bash
+    git push origin nome-da-sua-branch
+    ```
+
+6. Abra um **Pull Request** no repositório original.
+
+## Licença
+
+Este projeto está sob a [Licença MIT](LICENSE).
+
+## Aprenda Mais
+
+Para mais informações sobre como desenvolver com o Expo, consulte a [documentação oficial do Expo](https://docs.expo.dev/).
+
+## Comunidade
+
+Participe da comunidade de desenvolvedores do Expo:
+
+- [Expo no GitHub](https://github.com/expo/expo)
+- [Comunidade no Discord](https://chat.expo.dev)
+
+---
+
+**Gym App** é um aplicativo em constante evolução! Se você tem sugestões de melhorias ou novos recursos, fique à vontade para contribuir.
